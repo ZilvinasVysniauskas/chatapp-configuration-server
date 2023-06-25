@@ -1,0 +1,19 @@
+encrypt.key: ${ENCRYPT_KEY}
+
+spring:
+
+  application:
+    name: chatapp-configuration
+
+  profiles:
+    active: git
+
+
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          default-label: main
+          uri: https://github.com/ZilvinasVysniauskas/chatapp-configuration.git
+server.port: 8888
